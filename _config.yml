@@ -61,3 +61,5 @@ ignore: null
 theme: vivia
 deploy:
   type: ''
+archive_generator:
+  per_page: 0
