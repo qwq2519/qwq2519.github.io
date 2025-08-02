@@ -6,7 +6,7 @@ author: 2519
 language: zh-cn
 timezone: Asia/Shanghai
 url: https://qwq2519.github.io
-permalink: ':category/:title/'
+permalink: ':post_title/'
 permalink_defaults: null
 pretty_urls:
   trailing_index: true
