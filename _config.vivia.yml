@@ -24,17 +24,17 @@ hue: 180                         # 主题色调 (例如：红: 0，橙: 60，蓝
 # 个人信息
 avatar:                          # 头像图片文件路径，相对于 /source 目录
 author: qwq2519
-subtitle: My Blog start in sophomore
+subtitle: Sophomore year, restarting my blog.
 links:
-  - name: Twitter
-    icon: fa-brands fa-twitter      # 访问 https://fontawesome.com/search 获取图标代码
-    url: https://twitter.com
-  - name: Steam
-    icon: fa-brands fa-steam
-    url: https://store.steampowered.com
-  - name: GitHub
-    icon: fa-brands fa-github
-    url: https://github.com
+#  - name: Twitter
+#    icon: fa-brands fa-twitter      # 访问 https://fontawesome.com/search 获取图标代码
+#    url: https://twitter.com
+#  - name: Steam
+#    icon: fa-brands fa-steam
+#    url: https://store.steampowered.com
+#  - name: GitHub
+#    icon: fa-brands fa-github
+#    url: https://github.com
 
 # 侧边栏
 sidebar:
