@@ -65,6 +65,4 @@ archive_generator:
 
 mermaid:
   enable: true
-  version: "10.9.1"  #
-  options:
-    theme: default
+  version: "10.9.1"
