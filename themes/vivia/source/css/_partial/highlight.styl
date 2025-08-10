@@ -154,3 +154,18 @@ pre
   .keyword
   .javascript .function
     color: highlight-purple
+
+// 自定义 Mermaid 代码块背景色
+.article-entry
+  // 针对未渲染的 Mermaid 代码块（Markdown 原始代码块）
+  pre.code.language-mermaid,
+  pre.language-mermaid,
+  code.language-mermaid
+    background-color: #f8f9fa !important  // 浅色背景（替换为你需要的颜色）
+    color: #333 !important  // 文字色（与背景匹配）
+  
+  // 针对已渲染的 Mermaid 图表容器（SVG 外部容器）
+  .mermaid
+    background-color: #f8f9fa !important  // 与代码块背景保持一致
+    padding: 15px !important  // 可选：添加内边距
+    border-radius: inner-radius !important  // 保持主题圆角风格
