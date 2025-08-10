@@ -155,7 +155,7 @@ pre
   .javascript .function
     color: highlight-purple
 
-// Mermaid代码块自适应明暗模式
+// Mermaid代码块适配手动明暗模式切换
 .article-entry
   // 透明背景（继承页面背景）
   pre.language-mermaid,
@@ -166,23 +166,28 @@ pre
   // 亮色模式（默认）
   pre.language-mermaid,
   code.language-mermaid
-    color: #333 !important  // 深色文字适配浅色背景
+    color: #333 !important  // 深色文字
 
   .mermaid svg
     .node text,
     .edgeLabel text
-      fill: #333 !important  // 图表文字默认深色
+      fill: #333 !important  // 图表文字
+    .edgePath path,
+    .edge line
+      stroke: #666 !important  // 连接线
 
-  // 暗色模式（当系统/浏览器切换到暗色）
-  @media (prefers-color-scheme: dark)
+
+// 暗色模式（针对主题手动切换的类名，假设是<html class="dark">）
+html.dark
+  .article-entry
     pre.language-mermaid,
     code.language-mermaid
-      color: #f0f0f0 !important  // 浅色文字适配深色背景
+      color: #f0f0f0 !important  // 浅色文字
 
     .mermaid svg
       .node text,
       .edgeLabel text
-        fill: #f0f0f0 !important  // 图表文字切换为浅色
+        fill: #f0f0f0 !important  // 图表文字
       .edgePath path,
       .edge line
-        stroke: #bbb !important  // 连接线适配暗色
+        stroke: #bbb !important  // 连接线（适配暗色）
