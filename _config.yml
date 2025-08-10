@@ -22,10 +22,7 @@ skip_render: null
 new_post_name: ':year-:month-:day-:title.md'
 default_layout: post
 titlecase: false
-external_link:
-  enable: true
-  field: site
-  exclude: ''
+external_link: false # mermaid插件需要关闭这个功能；因为bug
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
@@ -66,6 +63,6 @@ archive_generator:
 
 mermaid:
   enable: true
-  version: "9.4.3"  # 使用最新稳定版本
-  options:  # 可选的Mermaid配置
-    theme: 'default'
+  version: "10.9.1"  #
+  options:
+    theme: default
