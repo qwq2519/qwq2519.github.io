@@ -63,3 +63,9 @@ deploy:
   type: ''
 archive_generator:
   per_page: 0
+
+mermaid:
+  enable: true
+  version: "9.4.3"  # 使用最新稳定版本
+  options:  # 可选的Mermaid配置
+    theme: 'default'
