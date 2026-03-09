@@ -28,7 +28,21 @@ tags:
 
 # 简单使用
 
+## CLAUDE.md
+
+项目或者全局的一个文档，给cc提供指导的，很重要，是cc行为准则
+
+1. 先设限制而不是写指南：先从小处开写，写cc常犯的小错误
+2. 如果别的地方有大量文档，你应该这样的来描述：why when 需要参考 xxx路径的xx文档来获取指南
+3. 避免纯纯的no，单纯的禁止，最好提供可行的替代方案
+
+这个文档应该尽量简洁扼要，冗余的东西，比如一个长bash，应该放外面
+
 ## 命令
+
+记住，把cc当做一个agent，不需要过度学习怎么使用，当成一个简单的工具，特别是以下命令简单看看，了解常见规范就行
+
+
 
 ### claude
 
@@ -109,6 +123,22 @@ tags:
 ​	这类似于有个 AI 秘书在会议途中帮你记录会议纪要，确保你们不会因为对话太长而“忘记”前情。
 
 ​	与 /clear 不同，/compact 保留了上下文的精华——在新会话中Claude仍可以参考之前对话的摘要继续讨论。
+
+
+
+但是好像压缩了效果一般，建议还是新开窗口，去/config里面把自动压缩关闭了。
+
+建议可以让cc把计划和进展输出到一个md文件，然后clear后新开一个
+
+
+
+### context
+
+```
+/context
+```
+
+展示上下文窗口是如何被使用的，帮助你更好的管理上下文
 
 ### memory
 
@@ -495,10 +525,18 @@ CC的上下文也不是很大，建议先用plan mode规划好任务，拆分需
 
 - 获取某个网页，文档的最新内容
 
+有些人喜欢扔一堆mcp
 
+但是有些人只保留一些核心的mcp，抽象层次高的，作为一个简单的网关
 
-# 多CLAUDE交互
-~~一个claude写代码，一个claude负责审查代码~~
+# sub agent
+主对话要处理一些杂活，可以外包给其他agent，让subagent专门处理某些东西，并且只返回结果给主对话
+
+优点是可并行，节省主对话context，更快了
+
+缺点是主对话上下文难传递，隔离了
+
+在claude.md里面指导主agent什么时候调用sub agent是比较通用的方法
 
 # 自定义命令
 
@@ -512,6 +550,28 @@ CC的上下文也不是很大，建议先用plan mode规划好任务，拆分需
 
 
 
+# hook 钩子
+
+
+
+# skills
+
+新更新的，比mcp层次更高，
+
+- 更像是一个抽象层次更高的指导
+
+- 渐进式披露
+
+
+
 # GITHUB ACTION
 
 你在仓库提issue，CC能自己写代码并提PR，push）
+
+
+
+## 扩展
+
+[Claude Code StatusLine | 小工具 大用处！| 超绝更新自定义 - 开发调优 - LINUX DO](https://linux.do/t/topic/859699)
+
+[claude-code-router/README_zh.md at main · musistudio/claude-code-router](https://github.com/musistudio/claude-code-router/blob/main/README_zh.md#claude-code-router)
